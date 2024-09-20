@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Product Suggestion{% endblock %}
+{% block content %}
+
+    <div class="main">
+        <h1>PRODUCT SUGGESTION</h1>
+        <div class="main-form">
+            <div class="inputs">
+                <div class="input-fields">
+                    <label for="userIndex">User Index</label>
+                    <input type="text" id="userIndex" name="userIndex" placeholder="User Index">
+                </div>
+                <div class="input-fields">
+                    <label for="noProducts">Number Of Products</label>
+                    <input type="number" id="noProducts" name="noProducts" placeholder="Number Of Products">
+                </div>
+                <div class="input-fields">
+                    <label for="algorithm">Algorithm</label>
+                    <select name="algorithm" id="algorithm">
+                      <option value="User-Based Collaborative Filtering">User-Based Collaborative Filtering</option>
+                      <option value="Item-Based Collaborative Filtering">Item-Based Collaborative Filtering</option>
+                      <option value="SVD">SVD</option>
+                    </select>
+                </div>
+            </div>
+            <div class="buttons">
+                <button onclick="onSubmitShowProducts()">
+                   Show Products
+                </button>
+                <button onclick="onSubmitShowSuggestions()">
+                   Show Suggestions
+                </button>
+            </div>
+        </div>
+        <div id="products-main">
+            <div id="products">
+            </div>
+        </div>
+        <div id="suggestions-main">
+            <div id="suggestions">
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
